@@ -32,23 +32,24 @@ yH = np.zeros((600))
 
 
 while x[i] >= 0 and y[i] >= 0:
-	#x  
+  #x  
   vx = vx + (ax * delta_t)
   x[i+1] = x[i] + (vx * delta_t)
-	#y
+  #y
   vy = vy + (ay * delta_t)
   y[i+1] = y[i] + (vy * delta_t)
-  #
+  #increment
   t += delta_t
   i+= 1
 
 while xH[j] >= 0 and yH[j] >= 0:
-	#x  
+  #xH  
   vxH = vxH + (axH * delta_t)
   xH[j+1] = xH[j] + (vxH * delta_t)
-	#y
+  #yH
   vyH = vyH + (ayH * delta_t)
   yH[j+1] = yH[j] + (vyH * delta_t)
+  #increment
   j+= 1
 
 plt.plot(x,y,'r',label="Tanpa Hambatan Udara")
